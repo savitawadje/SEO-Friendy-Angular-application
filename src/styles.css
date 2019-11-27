@@ -1,0 +1,591 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    padding: 0;
+    margin: 0;
+    background: #FFF;
+    font-family: 'Exo', sans-serif;
+}
+
+body button,
+.btn,
+body a {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+.btn:hover,
+body button:hover {
+    opacity: .8;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+body a:hover {
+    text-decoration: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1.a{
+    font-family: 'Merriweather Sans', sans-serif;
+
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 1.9;
+    color: #999;
+    font-family: 'Hind', sans-serif;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* //Reset Code */
+
+/* colors code */
+.text-bl {
+    color: #343a40;
+}
+
+.text-da {
+    color: #000;
+}
+
+.text-wh {
+    color: #fff;
+}
+
+.text-li {
+    color: #f8f9fa;
+}
+
+.bg-li {
+    background: #f8f9fa;
+}
+
+.bg-wh {
+    background: #fff;
+}
+
+.let {
+    letter-spacing: 1px;
+}
+
+/* //colors code */
+
+/* ----------------------------------header---------------------------------------------------------------------- */
+header {
+    position: absolute;
+    z-index: 1;
+    /* background: url(assets/1.jpg) no-repeat top; */
+    background-color: #723f5f ;
+    background-size: cover;
+    width: 100%;
+}
+
+.main-top {
+    position: relative;
+   
+}
+
+/* navigation */
+/* CSS Document */
+.toggle-2, .toggle,[id^=drop] {
+    display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+#logo a {
+    font-size: 38px;
+    color: white ;
+    text-shadow: 2px 5px 3px rgba(249, 247, 247, 0.06);
+    font-weight: 200;
+    float: left;
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+/* Positioning the navigation items inline */
+nav ul li {
+    margin: 0px;
+    display: inline-block;
+    
+}
+
+/* Styling the links */
+nav a {
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin: 0 14px;
+
+}
+
+nav a.nav-style {
+    padding-bottom: 2px;
+}
+
+nav a:hover {
+    color: #fff;
+    opacity: .8;
+}
+
+/* Background color change on Hover */
+nav a.nav-style.active,
+nav a.nav-style:hover {
+    border-bottom: 1px solid #fff;
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 25px;
+    background: #fff;
+    padding: 10px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    z-index: 9;
+    /* has to be the same number as the "line-height" of "nav a" */
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover>ul {
+    display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+nav ul ul li a {
+    color: #000;
+    display: block;
+    font-size: 15px;
+    margin: 10px;
+}
+
+nav ul ul li a:hover {
+    color: #000;
+}
+
+nav ul ul li a.drop-text.active {
+    color: #000;
+    opacity: .7;
+}
+
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 170px;
+}
+
+a.nav-button {
+    border: 1px solid rgba(255, 255, 255, 0.52);
+    padding: 8px 18px;
+	-webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: inline-block;
+}
+
+
+/* //header */
+
+/* title */
+h3.tittle {
+    font-size: 36px;
+    color: #000;
+}
+
+.blog_w3ls h3.tittle {
+    color: #fff;
+}
+
+/* //title */
+
+/* more */
+.blog_w3ls {
+    background: #719cfe;
+}
+
+a.blog-title {
+    color: #000;
+    font-size: 22px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 12px 0 16px;
+    line-height: 1.4;
+}
+
+.blog-body span {
+    color: #636363;
+    text-transform: uppercase;
+    font-size: 12px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    display: block;
+}
+
+/* //more */
+
+
+ /* ---------------------blog---------------------- */
+ /* //blog */
+
+/* ------------------------------------ right side----------------------------------------------- */
+.single-gd {
+    padding: 2em;
+    background-color: white;
+    margin-bottom: 1em;
+}
+
+.single-gd img {
+    margin-bottom: 1em;
+}
+
+.single-gd h4 {
+    font-size: 20px;
+    color: #0e0f10;
+    margin-bottom: 1em;
+}
+
+.single-gd form input[type="email"] {
+    outline: none;
+    padding: 12px 15px;
+    font-size: 13px;
+    color: #777;
+    background: #ffffff;
+    letter-spacing: 1px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.single-gd form button {
+    background: #0d0e10;
+    padding: 12px 20px;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    letter-spacing: 1px;
+    margin-top: 1em;
+    -webkit-border-radius: 0px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    text-transform: uppercase;
+}
+
+.tech-btm img {
+    background: #fff;
+    padding: 6px;
+}
+
+ul.blog_list li a:hover {
+    color: #719cfe;
+}
+
+ul.pagination li a {
+    color: #555;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+ul.pagination {
+    margin-top: 2em;
+}
+
+.blog-grid-right {
+    float: left;
+    width: 60%;
+    padding-left: 1em;
+}
+
+.blog-grid-left {
+    float: left;
+    width: 40%;
+}
+
+.blog-grid-right h5 a {
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: .5px;
+    color: #444;
+}
+
+.blog-grid-right h5 a:hover {
+    opacity: .8;
+}
+
+.list-group-item.active {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+
+.button-style-w3ls {
+    padding: 11px 18px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: #03c2ce;
+    -webkit-border-radius: 0px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.button-style-w3ls:hover {
+    color: #fff;
+    opacity: .8;
+}
+.creatives-grid {
+    margin-bottom: 1.5em;
+}
+
+.creatives-grid .p-mask {
+    padding: 1em;
+}
+
+.creatives-grid .p-mask .p-desc {
+    color: #a3a3a3;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    font-size: 1em;
+}
+
+.p-mask h4 a {
+    color: #f10900;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-shadow: 0px 3px 4px rgba(189, 188, 188, 0.56);
+    display: inline-block;
+}
+
+.p-mask span {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.p-mask p {
+    color: #717070;
+}
+
+/* //right side */
+
+/* ----------------------------------------single page-------------------------------------------------------- */
+/* comments */
+.media img {
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 10%;
+}
+
+.media-body h5 {
+    color: #000;
+    font-size: 21px;
+    font-weight: 600;
+}
+ 
+
+
+
+/* -------------------------------------contact-------------------------- */
+
+a.button-style-w3 {
+    color: #333;
+    border: 1px solid #333;
+    padding: 11px 30px;
+    display: inline-block;
+    font-size: 15px;
+    letter-spacing: 1px;
+    -webkit-border-radius: 0px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    outline: none;
+}
+
+h3.main-title-w3pvt {
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: #000;
+    line-height: 1.4;
+}
+
+.about-right img {
+    background: #fff;
+	 -webkit-box-shadow: 0 20px 40px -10px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 20px 40px -10px rgba(0, 0, 0, .3);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, .3);
+    padding: 8px;
+}
+
+ /* ---------------------contact-------------------------- */
+ .w3pvt-webinfo_mail_grid_right {
+    background: #f7f7f7;
+    padding: 2em;
+    -webkit-box-shadow: 7px 7px 10px 0 rgba(56, 56, 56, 0.21);
+    -moz-box-shadow: 7px 7px 10px 0 rgba(56, 56, 56, 0.21);
+    box-shadow: 7px 7px 10px 0 rgba(56, 56, 56, 0.21);
+}
+
+.w3pvt-webinfo_mail_grid_right input[type="text"],
+.w3pvt-webinfo_mail_grid_right input[type="email"],
+.w3pvt-webinfo_mail_grid_right textarea {
+    outline: none;
+    padding: 12px;
+    font-size: 16px;
+    color: #555;
+    width: 100%;
+    border: 1px solid #E6E6E6;
+}
+
+.w3pvt-webinfo_mail_grid_right textarea {
+    min-height: 180px;
+    width: 100% !important;
+    resize: none;
+}
+
+.w3pvt-webinfo_mail_grid_right button {
+    outline: none;
+    padding: 11px 0;
+    font-size: 16px;
+    color: #fff;
+    background: #03c2ce;
+    width: 100%;
+    border: none;
+    letter-spacing: 2px;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+}
+
+.contact-icon-wthree {
+    width: 65px;
+    height: 65px;
+    background: #f7f7f7;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-box-shadow: 7px 7px 10px 0 rgba(56, 56, 56, 0.21);
+    -moz-box-shadow: 7px 7px 10px 0 rgba(56, 56, 56, 0.21);
+    box-shadow: 7px 7px 10px 0 rgba(56, 56, 56, 0.21);
+    margin: 0 auto;
+}
+
+.contact-left-w3ls span {
+    font-size: 24px;
+    color: #f10900;
+    line-height: 65px;
+}
+
+.contact-left-w3ls h4 {
+    color: #000;
+    font-size: 21px;
+    margin-bottom: .5em;
+    letter-spacing: 1px;
+}
+
+.contact-left-w3ls p a {
+    color: #8d8d8d;
+}
+
+.contact-left-w3ls h3 {
+    font-size: 26px;
+    color: #000;
+    margin-bottom: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

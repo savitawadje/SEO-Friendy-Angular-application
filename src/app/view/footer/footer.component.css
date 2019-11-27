@@ -1,0 +1,52 @@
+footer{
+    background-color: #723f5f ;
+}
+
+ul.footer-nav-wthree li {
+    display: inline-block;
+}
+
+ul.footer-nav-wthree li a {
+    color: #000;
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+a.btn-footer {
+    border: 1px solid white;
+    padding: 8px 16px;
+	-webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+
+/* copyright */
+.copy_right p a {
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.copy_right p {
+    font-size: 15px;
+}
+
+/* //copyright */
+
+/* social icons */
+.social-icons-footer ul li {
+    display: inline-block;
+}
+
+.social-icons-footer ul li a span {
+    color: white;
+    margin: 0 8px;
+    font-size: 16px;
+}
+
+/* //social icons */

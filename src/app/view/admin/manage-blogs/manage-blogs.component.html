@@ -1,0 +1,55 @@
+<div>
+
+    <div class="container">
+        <h3 class="tittle text-center "> Manage Blog</h3>
+    </div> <br>
+  <div class="dash-header">
+    <div class="dash-nav">
+
+      <button class="btn btn-primary" [routerLink]="[ '/admin/edit-blog' ]"> Create Post</button>
+       
+      <!-- <div class="container">
+        <app-edit-blog> </app-edit-blog>
+      </div> -->
+    </div>
+  </div>
+  <br>
+
+  <div>
+    <form class="form-inline">
+      <input class="form-control" name="searchInput" placeholder="Search Blog" #searchInput="ngModel"[(ngModel)]="searchText" style="width: 50%;">
+      <button class="btn btn-outline-primary" (click)="searchText=''">Clear</button>
+    </form>
+  </div>
+  <br>
+  <table class="table table-bordered table-striped">
+    <tr>
+      <th>No</th>
+      <th>Title</th>
+      <th>Image</th>
+      <th>Description</th>
+      <th>Action</th>
+    </tr>
+    <ng-container *ngFor="let blog of blogArray; let i = index">
+      <tr>
+        <td>{{i+1}}</td>
+        <td contenteditable="true"> {{blog.title}} </td>
+        <td><img [src]="blog.image" class="pl-4" height="300px"></td>
+        <td>{{blog.description}}</td>
+        <td class="action">
+          <!-- <button class="btn btn-info btn-sm" (click)="this.blogService.populateForm(blog)" >Edit</button> -->
+
+          <!-- <a class="btn btn-success btn-sm"  [routerLink]="[ '/admin/update-blog',blog.$key]" (click)="blogService.update(blog)" >Update </a> -->
+          <button class="btn btn-primary btn-sm" [routerLink]="['/edit-blog/',blog.$key,blog.title,blog.description,blog.image]"> Update </button>
+          &nbsp;
+          <button class="btn btn-danger btn-sm" (click)="onDelete(blog.$key)"> Delete </button>
+        </td>
+      </tr>
+    </ng-container>
+  </table>
+
+  <div class="alert alert-danger" *ngIf="showDeletedMessage">
+    Deleted successfully from Database.
+  </div>
+  <!-- <td><img src="{{value.image}}" ></td> -->
+</div>
